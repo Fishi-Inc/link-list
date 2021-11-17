@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap');
+
+:root {
+    --color-1: #36383B;
+    --color-2: #2B2C2E;
+    --color-3: #1F1F21;
+    --color-4: #131314;
+    --color-font-1: #FFFFFF;
+    --color-font-2: #ECEBEB;
+    --color-primary-1: #0099FF;
+    --color-primary-2: #007FD3;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.website {
+    box-sizing: border-box;
+    background-color: var(--color-2);
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+
+.container-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: max-content;
+    width: max-content;
+    max-width: 500px;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 15px;
+    background-color: var(--color-3);
+    box-shadow: var(--color-4) 10px 10px 0;
+    transition-property: box-shadow;
+    transition: 0.25s ease-in-out;
+}
+
+.container-link:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: var(--color-4) 20px 20px 0;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+/* Fonts */
+.f1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--color-font-1);
+}
+
+.f2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6em;
+    color: var(--color-font-2);
+}
+
+.h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--color-font-1);
+    width: 100%;
+}
+
+.h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+    color: var(--color-font-1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.a {
+    color: var(--color-primary-1);
+    cursor: pointer;
+    transition-property: color text-shadow;
+    transition: 0.25s ease-in-out;
+}
+
+.a:hover {
+    color: var(--color-primary-2);
+    text-shadow: var(--color-4) 0 7px 5px;
+}
