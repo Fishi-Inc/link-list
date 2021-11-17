@@ -74,7 +74,11 @@ function array_make_div(title_list, desc_list, link_list) {
     // });
 }
 
-function make_div(title, desc, link, container) {
+function make_div(title, desc, link) {
+    const link_flex = document.querySelector("#link-flex");
+    const container = this.document.createElement('div');
+    container.classList.add('container-link');
+    link_flex.appendChild(container);
     const title_a = this.document.createElement('a');
     title_a.classList.add('h2');
     title_a.classList.add('a');
