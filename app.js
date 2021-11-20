@@ -26,10 +26,6 @@ window.addEventListener("load", function () {
         const link = link_raw;
         make_div(title, desc, link);
     }
-    
-
-
-
 })
 
 function array_make_div(title_list, desc_list, link_list) {
@@ -42,6 +38,7 @@ function array_make_div(title_list, desc_list, link_list) {
         const title_a = this.document.createElement('a');
         title_a.classList.add('h2');
         title_a.classList.add('a');
+        title_a.classList.add('fc1');
         title_a.innerHTML = title_list[i];
         title_a.setAttribute('href', link_list[i]);
         title_a.setAttribute('target', '_blank');
@@ -49,6 +46,7 @@ function array_make_div(title_list, desc_list, link_list) {
 
         const desc_p = this.document.createElement('p');
         desc_p.classList.add('f2');
+        desc_p.classList.add('fc2');
         desc_p.innerHTML = desc_list[i];
         container.appendChild(desc_p);
     }
@@ -82,6 +80,7 @@ function make_div(title, desc, link) {
     const title_a = this.document.createElement('a');
     title_a.classList.add('h2');
     title_a.classList.add('a');
+    title_a.classList.add('fc1');
     title_a.setAttribute('href', link);
     title_a.setAttribute('target', '_blank');
     title_a.innerHTML = title;
@@ -89,6 +88,7 @@ function make_div(title, desc, link) {
 
     const desc_p = this.document.createElement('p');
     desc_p.classList.add('f2');
+    desc_p.classList.add('fc2');
     desc_p.innerHTML = desc;
     container.appendChild(desc_p);
 }

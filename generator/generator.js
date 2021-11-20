@@ -9,7 +9,8 @@ input_btn.addEventListener('click', function () {
     const topic = input_topic.value;
     const title = input_title.value;
     const url = input_url.value;
-    const description = input_description.value;
+    const desc = input_description.innerText;
+    description = desc.replace(/\n/g, '&lt;br&gt;');
 
     const current_url = window.location.href;
     if (current_url.endsWith('/')) {
@@ -69,6 +70,7 @@ function create_url_list(current_url, data) {
 }
 
 function create_url(current_url, data) {
+    current_url = current_url.replace('/generator/index.html', '');
     const output = current_url + "/?topic=" + data.topic + "&title=" + data.title + "&link=" + data.url + "&desc=" + data.description;
     generator_output.innerHTML = output;
 }

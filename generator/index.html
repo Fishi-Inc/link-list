@@ -9,16 +9,19 @@
 <body>
     <div class="website">
         <div class="flex">
-            <div class="generator">
+            <div class="generator fc2">
                 <h1 class="f1 h1">Link Generator</h1>
-                <p class="f1">Thema:<input type="text" id="input-topic" class="input fd1"></p>
-                <p class="f1">Titel:<input type="text" id="input-title" class="input fd1"></p>
-                <p class="f1">URL:<input type="url" id="input-url" class="input fd1"></p>
-                <p class="f1">Beschreibung:<input type="text" id="input_desc" class="input fd1"></p>
-                <input type="button" value="Generieren" id="input-btn" class="button f1">
-                <p class="f1">fertiger Link: <p id="generator-output" class="f1"></p></p>
+                <div id="topic-div"><p class="f1 input-field">Thema:</p><input type="text" id="input-topic" class="input f1 fc1"></div>
+                <div class="generator-card">
+                    <p class="f1 input-field">Titel:</p><input type="text" id="input-title" class="input f1 fc1">
+                    <p class="f1 input-field">URL:</p><input type="url" id="input-url" class="input f1 fc1">
+                    <p class="f1 input-field">Beschreibung:</p><span id="input_desc" contenteditable="true" class="input textarea f1 fc1"></span>
+                    <input type="button" value="Generieren" id="input-btn" class="button f1 fc1">
+                </div>
+                <p class="f1">fertiger Link: <pre id="generator-output" class="f1"></pre></p>
             </div>
         </div>
+        <div type="button" tabindex="0" class="add-btn circle"><span class="material-icons">add</span></div>
     </div>
     <script src="generator.js"></script>
 </body>
