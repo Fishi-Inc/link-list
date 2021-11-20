@@ -5,6 +5,13 @@ window.addEventListener("load", function () {
 
     if (!urlParams.has("title") || !urlParams.has("desc") || !urlParams.has("link")) {
         alert("Um einen gültigen Link zu erstellen gehe wie folgt vor:\nGebe hinter der derzietigen URL ein ? ein,\ndann schreibe topic=Thema,\nArgumente werden dann immer mit einem & getrennt\nDu kannst dann ergänzen:\ntitle=Titel\ndesc=Beschreibung und\nlink=https://website.com\n(es ist auch Möglich mehrere Titel, Links und Beschreibungen zu schreiben, diese müssen durch ein ~ getrennt werden.)\n\nBeispiel:\n/?topic=Test&title=test1~test2&link=https://fishi.fish~https://website.de&desc=Test description 1~Test description 2")
+        const current_url = window.location.href;
+        if (current_url.endsWith('/')) {
+            url = current_url.toString() + 'generator/'
+        } else {
+            url = current_url.toString() + '/generator/'
+        }
+        window.location.href = url;
         return;
     }
 
