@@ -12,8 +12,8 @@ input_btn.addEventListener('click', function () {
     const input_description = document.getElementById('input_desc');
     const generator_card = document.querySelectorAll('.generator-card');
 
-    const title = input_title.value;
-    const url = input_url.value;
+    const title = input_title.innerText;
+    const url = input_url.innerText;
     const desc = input_description.innerText;
     description = desc.replace(/\n/g, '&lt;br&gt;');
 
@@ -48,8 +48,8 @@ input_btn.addEventListener('click', function () {
         const descriptions = [];
 
         for (let i = 0; i < generator_card.length; i++) {
-            const title = input_title_class[i].value;
-            const url = input_url_class[i].value;
+            const title = input_title_class[i].innerText;
+            const url = input_url_class[i].innerText;
             const desc = input_description_class[i].innerText;
 
             titles.push(title);
