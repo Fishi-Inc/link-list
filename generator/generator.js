@@ -103,9 +103,9 @@ function create_url(current_url, data) {
 
 add_btn.addEventListener('click', function () {
     const html = `<div class="generator-card">
-    <p class="f1 input-field">Titel:</p><input type="text" class="input f1 fc1 input-title">
-    <p class="f1 input-field">URL:</p><input type="url" class="input f1 fc1 input-url">
-    <p class="f1 input-field">Beschreibung:</p><span contenteditable="true" class="input textarea f1 fc1 input_desc"></span>
+        <p class="f1 input-field">Titel:</p><span id="input-title" contenteditable="true" class="input textarea f1 fc1 input-title"></span>
+        <p class="f1 input-field">URL:</p><span id="input-url" contenteditable="true" class="input textarea f1 fc1 input-url"></span>
+        <p class="f1 input-field">Beschreibung:</p><span id="input_desc" contenteditable="true" class="input textarea f1 fc1 input_desc"></span>
     </div>`;
     console.log(html);
 
